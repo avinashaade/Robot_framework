@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-03-25T15:02:53.800272" rpa="false" schemaversion="5">
+<suite id="s1" name="Form Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\form_test.robot">
+<test id="s1-t1" name="Fill Form Test" line="6">
+<kw name="Open Form Page" owner="form_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:53.963803" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-25T15:02:53.962795" elapsed="4.108934"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.071729" elapsed="0.034578"/>
+</kw>
+<status status="PASS" start="2026-03-25T15:02:53.962795" elapsed="4.143512"/>
+</kw>
+<kw name="Fill Form Details" owner="form_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.109822" level="INFO">Typing text 'Avinash' into text field 'id=name'.</msg>
+<arg>${NAME_FIELD}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.108316" elapsed="0.109761"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.218077" level="INFO">Typing text 'test@test.com' into text field 'id=email'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.218077" elapsed="0.115634"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.334719" level="INFO">Typing text '8788888888' into text field 'id=phone'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.334719" elapsed="0.070549"/>
+</kw>
+<arg>Avinash</arg>
+<arg>test@test.com</arg>
+<arg>8788888888</arg>
+<status status="PASS" start="2026-03-25T15:02:58.107309" elapsed="0.297959"/>
+</kw>
+<kw name="Select Form Options" owner="form_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.405268" level="INFO">Clicking element 'xpath=//input[@value='male']'.</msg>
+<arg>${GENDER_MALE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.405268" elapsed="0.068141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.474416" level="INFO">Clicking element 'xpath=//input[@value='monday']'.</msg>
+<arg>${MONDAY_CHECKBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.474416" elapsed="0.054991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-25T15:02:58.530662" level="INFO">Clicking element 'xpath=//input[@value='sunday']'.</msg>
+<arg>${SUNDAY_CHECKBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.529407" elapsed="0.053233"/>
+</kw>
+<status status="PASS" start="2026-03-25T15:02:58.405268" elapsed="0.177372"/>
+</kw>
+<kw name="Close Browser Session" owner="form_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-03-25T15:02:58.583655" elapsed="2.164178"/>
+</kw>
+<status status="PASS" start="2026-03-25T15:02:58.582640" elapsed="2.166068"/>
+</kw>
+<status status="PASS" start="2026-03-25T15:02:53.962269" elapsed="6.786439"/>
+</test>
+<status status="PASS" start="2026-03-25T15:02:53.802279" elapsed="6.948923"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Form Test" id="s1" pass="1" fail="0" skip="0">Form Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
