@@ -14,4 +14,6 @@ Verify Drop Successful
     Element Text Should Be    ${TARGET_ELEMENT}    Dropped!
 
 Close Browser Session
-    Close All Browsers
+    Close All Browsers 
+
+    
