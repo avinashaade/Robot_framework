@@ -1,610 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-16T14:36:14.592634" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests">
-<suite id="s1-s1" name="Alert Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\alert_test.robot">
-<test id="s1-s1-t1" name="Verify Alert Handling" line="5">
-<kw name="Open Alert Page" owner="alert_keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:15.084520" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:36:15.083516" elapsed="12.756179"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:36:27.840701" elapsed="0.045993"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:15.082405" elapsed="12.804289"/>
-</kw>
-<kw name="Handle Alert Popup" owner="alert_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:27.890228" level="INFO">Clicking element 'xpath=//button[contains(text(),'Alert')]'.</msg>
-<arg>${ALERT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:27.889228" elapsed="0.207850"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:28.098587" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>accept</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2026-04-16T14:36:28.098587" elapsed="0.018580"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:27.888215" elapsed="0.229951"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:36:28.118679" elapsed="2.308903"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:15.081057" elapsed="15.347526"/>
-</test>
-<status status="PASS" start="2026-04-16T14:36:14.664098" elapsed="15.766041"/>
-</suite>
-<suite id="s1-s2" name="Dragdrop Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\dragdrop_test.robot">
-<test id="s1-s2-t1" name="Drag And Drop Test" line="5">
-<kw name="Open Drag Drop Page" owner="dragdrop_keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:30.448760" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:36:30.448760" elapsed="5.353679"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:36:35.802439" elapsed="0.034083"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:30.448760" elapsed="5.387762"/>
-</kw>
-<kw name="Perform Drag And Drop" owner="dragdrop_keywords">
-<kw name="Drag And Drop" owner="SeleniumLibrary">
-<arg>${SOURCE_ELEMENT}</arg>
-<arg>${TARGET_ELEMENT}</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2026-04-16T14:36:35.839025" elapsed="0.635593"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:35.837516" elapsed="0.638113"/>
-</kw>
-<kw name="Verify Drop Successful" owner="dragdrop_keywords">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:36.478208" level="INFO">Verifying element 'id=droppable' contains exact text 'Dropped!'.</msg>
-<arg>${TARGET_ELEMENT}</arg>
-<arg>Dropped!</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-04-16T14:36:36.478208" elapsed="0.046970"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:36.476698" elapsed="0.048480"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:36:36.526189" elapsed="2.243137"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:30.447745" elapsed="8.322686"/>
-</test>
-<status status="PASS" start="2026-04-16T14:36:30.433220" elapsed="8.338104"/>
-</suite>
-<suite id="s1-s3" name="Dropdown Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\dropdown_test.robot">
-<test id="s1-s3-t1" name="Select From Dropdown Test" line="7">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:38.775414" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dropdown'.</msg>
-<arg>https://the-internet.herokuapp.com/dropdown</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:36:38.775414" elapsed="6.691800"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:36:45.468226" elapsed="0.042969"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:45.512209" level="INFO">Selecting options from selection list 'id=dropdown' by label Option 1.</msg>
-<arg>id=dropdown</arg>
-<arg>Option 1</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-04-16T14:36:45.512209" elapsed="0.268059"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-16T14:36:48.782668" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-16T14:36:45.781234" elapsed="3.001434"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:36:48.783695" elapsed="2.243487"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:38.775414" elapsed="12.253287"/>
-</test>
-<status status="PASS" start="2026-04-16T14:36:38.772375" elapsed="12.258358"/>
-</suite>
-<suite id="s1-s4" name="Form Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\form_test.robot">
-<test id="s1-s4-t1" name="Fill Form Test" line="6">
-<kw name="Open Form Page" owner="form_keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:51.041671" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:36:51.041671" elapsed="5.026682"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:36:56.068353" elapsed="0.049939"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:51.041671" elapsed="5.077218"/>
-</kw>
-<kw name="Fill Form Details" owner="form_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:56.122433" level="INFO">Typing text 'Avinash' into text field 'id=name'.</msg>
-<arg>${NAME_FIELD}</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:56.122433" elapsed="0.236729"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:56.361160" level="INFO">Typing text 'test@test.com' into text field 'id=email'.</msg>
-<arg>${EMAIL_FIELD}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:56.359162" elapsed="0.196999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:56.557141" level="INFO">Typing text '8788888888' into text field 'id=phone'.</msg>
-<arg>${PHONE_FIELD}</arg>
-<arg>${phone}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:56.557141" elapsed="0.234942"/>
-</kw>
-<arg>Avinash</arg>
-<arg>test@test.com</arg>
-<arg>8788888888</arg>
-<status status="PASS" start="2026-04-16T14:36:56.120902" elapsed="0.671181"/>
-</kw>
-<kw name="Select Form Options" owner="form_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:56.794983" level="INFO">Clicking element 'xpath=//input[@value='male']'.</msg>
-<arg>${GENDER_MALE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:56.794101" elapsed="0.243302"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:57.038912" level="INFO">Clicking element 'xpath=//input[@value='monday']'.</msg>
-<arg>${MONDAY_CHECKBOX}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:57.038402" elapsed="0.398297"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:57.439235" level="INFO">Clicking element 'xpath=//input[@value='sunday']'.</msg>
-<arg>${SUNDAY_CHECKBOX}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:36:57.438219" elapsed="0.130857"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:56.793080" elapsed="0.777019"/>
-</kw>
-<kw name="Close Browser Session" owner="form_keywords">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-04-16T14:36:57.571115" elapsed="2.240236"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:57.571115" elapsed="2.240236"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:51.040688" elapsed="8.771882"/>
-</test>
-<status status="PASS" start="2026-04-16T14:36:51.032051" elapsed="8.781529"/>
-</suite>
-<suite id="s1-s5" name="Hover Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\hover_test.robot">
-<test id="s1-s5-t1" name="Verify Mouse Hover Functionality" line="9">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:36:59.823491" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>${URL}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:36:59.821984" elapsed="5.265278"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:05.088270" elapsed="0.050022"/>
-</kw>
-<kw name="Hover Over Menu" owner="hover_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HOVER_BTN}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:05.139310" elapsed="0.085574"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:05.225863" level="INFO">Simulating Mouse Over on element 'xpath=//button[text()='Point Me']'.</msg>
-<arg>${HOVER_BTN}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:05.224884" elapsed="0.356694"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-16T14:37:07.583155" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-16T14:37:05.581578" elapsed="2.001577"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${DOUBLE_OPTION}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:07.583155" elapsed="0.045311"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:05.139310" elapsed="2.489156"/>
-</kw>
-<kw name="Click Mobile Option" owner="hover_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:07.631577" level="INFO">Clicking element 'xpath=//a[contains(text(),'Mobile')]'.</msg>
-<arg>${DOUBLE_OPTION}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:07.630477" elapsed="0.226054"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:07.629476" elapsed="0.227055"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:37:07.857531" elapsed="2.304168"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:36:59.821984" elapsed="10.339715"/>
-</test>
-<test id="s1-s5-t2" name="Verify Double Click Functionality" line="16">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:10.163691" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>${URL}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:10.163691" elapsed="5.288580"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:15.453249" elapsed="0.056500"/>
-</kw>
-<kw name="Double Click Copy Button" owner="hover_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${COPY_BTN}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:15.510804" elapsed="0.048007"/>
-</kw>
-<kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:15.560898" level="INFO">Double clicking element 'xpath=//button[text()='Copy Text']'.</msg>
-<arg>${COPY_BTN}</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:15.559907" elapsed="0.335845"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:15.509749" elapsed="0.386003"/>
-</kw>
-<kw name="Verify Copy Action" owner="hover_keywords">
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:15.965543" level="INFO">${text1} = Hello World!</msg>
-<var>${text1}</var>
-<arg>${FIELD1}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:15.898296" elapsed="0.067247"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:16.014831" level="INFO">${text2} = Hello World!</msg>
-<var>${text2}</var>
-<arg>${FIELD2}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:15.966556" elapsed="0.048275"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${text1}</arg>
-<arg>${text2}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-04-16T14:37:16.015831" elapsed="0.001004"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:15.896768" elapsed="0.120067"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:37:16.018356" elapsed="2.231315"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:10.162694" elapsed="8.088058"/>
-</test>
-<status status="PASS" start="2026-04-16T14:36:59.814580" elapsed="18.437197"/>
-</suite>
-<suite id="s1-s6" name="Login Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\login_test.robot">
-<test id="s1-s6-t1" name="Valid Login Test" line="6">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-27T10:48:02.775896" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\login_test.robot">
+<test id="s1-t1" name="Valid Login Test" line="6">
 <kw name="Open Login Page" owner="login_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:18.263864" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-04-27T10:48:02.938507" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
 <arg>https://the-internet.herokuapp.com/login</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:18.263864" elapsed="5.235215"/>
+<status status="PASS" start="2026-04-27T10:48:02.938507" elapsed="4.073855"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:23.500218" elapsed="0.056772"/>
+<status status="PASS" start="2026-04-27T10:48:07.012906" elapsed="0.031669"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:18.263864" elapsed="5.293126"/>
+<status status="PASS" start="2026-04-27T10:48:02.937531" elapsed="4.107044"/>
 </kw>
 <kw name="Enter Username" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:23.560643" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<msg time="2026-04-27T10:48:07.067759" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:23.559563" elapsed="0.345650"/>
+<status status="PASS" start="2026-04-27T10:48:07.045574" elapsed="0.240795"/>
 </kw>
 <arg>${USERNAME}</arg>
-<status status="PASS" start="2026-04-16T14:37:23.558519" elapsed="0.347671"/>
+<status status="PASS" start="2026-04-27T10:48:07.045574" elapsed="0.242183"/>
 </kw>
 <kw name="Enter Password" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:23.910595" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<msg time="2026-04-27T10:48:07.290625" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:23.909577" elapsed="0.258631"/>
+<status status="PASS" start="2026-04-27T10:48:07.289808" elapsed="0.119600"/>
 </kw>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2026-04-16T14:37:23.908189" elapsed="0.260019"/>
+<status status="PASS" start="2026-04-27T10:48:07.287757" elapsed="0.121651"/>
 </kw>
 <kw name="Click Login Button" owner="login_keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:24.171831" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<msg time="2026-04-27T10:48:07.410935" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:24.170770" elapsed="0.944290"/>
+<status status="PASS" start="2026-04-27T10:48:07.410935" elapsed="0.578195"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:24.169713" elapsed="0.945347"/>
+<status status="PASS" start="2026-04-27T10:48:07.409408" elapsed="0.580837"/>
 </kw>
 <kw name="Verify Login Success" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SUCCESS_MESSAGE}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:25.116059" elapsed="0.052490"/>
+<status status="PASS" start="2026-04-27T10:48:07.991255" elapsed="0.029933"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:25.236178" level="INFO">Element 'xpath=//div[contains(@class,'success')]' contains text 'You logged into a secure area!'.</msg>
+<msg time="2026-04-27T10:48:08.054151" level="INFO">Element 'xpath=//div[contains(@class,'success')]' contains text 'You logged into a secure area!'.</msg>
 <arg>${SUCCESS_MESSAGE}</arg>
 <arg>You logged into a secure area!</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-16T14:37:25.168549" elapsed="0.067629"/>
+<status status="PASS" start="2026-04-27T10:48:08.021188" elapsed="0.032963"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:25.116059" elapsed="0.120119"/>
+<status status="PASS" start="2026-04-27T10:48:07.990245" elapsed="0.063906"/>
 </kw>
 <kw name="Close Browser Session" owner="login_keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-04-16T14:37:25.237089" elapsed="2.216555"/>
+<status status="PASS" start="2026-04-27T10:48:08.055139" elapsed="2.164633"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:25.237089" elapsed="2.216555"/>
+<status status="PASS" start="2026-04-27T10:48:08.055139" elapsed="2.165514"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:18.261861" elapsed="9.192755"/>
+<status status="PASS" start="2026-04-27T10:48:02.936421" elapsed="7.284232"/>
 </test>
-<test id="s1-s6-t2" name="Invalid Login Test" line="15">
+<test id="s1-t2" name="Invalid Login Test" line="15">
 <kw name="Open Login Page" owner="login_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:27.457619" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-04-27T10:48:10.224634" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
 <arg>https://the-internet.herokuapp.com/login</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:27.457619" elapsed="6.453006"/>
+<status status="PASS" start="2026-04-27T10:48:10.224634" elapsed="4.106021"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:33.911620" elapsed="0.058229"/>
+<status status="PASS" start="2026-04-27T10:48:14.331670" elapsed="0.031306"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:27.457619" elapsed="6.513194"/>
+<status status="PASS" start="2026-04-27T10:48:10.223642" elapsed="4.139334"/>
 </kw>
 <kw name="Enter Username" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:33.973916" level="INFO">Typing text 'wrong' into text field 'id=username'.</msg>
+<msg time="2026-04-27T10:48:14.363980" level="INFO">Typing text 'wrong' into text field 'id=username'.</msg>
 <arg>${USERNAME_FIELD}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:33.973916" elapsed="0.259323"/>
+<status status="PASS" start="2026-04-27T10:48:14.363980" elapsed="0.113924"/>
 </kw>
 <arg>wrong</arg>
-<status status="PASS" start="2026-04-16T14:37:33.971814" elapsed="0.261425"/>
+<status status="PASS" start="2026-04-27T10:48:14.362976" elapsed="0.114928"/>
 </kw>
 <kw name="Enter Password" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:34.236429" level="INFO">Typing text 'wrong' into text field 'id=password'.</msg>
+<msg time="2026-04-27T10:48:14.479453" level="INFO">Typing text 'wrong' into text field 'id=password'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:34.235422" elapsed="0.190441"/>
+<status status="PASS" start="2026-04-27T10:48:14.479453" elapsed="0.072900"/>
 </kw>
 <arg>wrong</arg>
-<status status="PASS" start="2026-04-16T14:37:34.234245" elapsed="0.192677"/>
+<status status="PASS" start="2026-04-27T10:48:14.478415" elapsed="0.073938"/>
 </kw>
 <kw name="Click Login Button" owner="login_keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:34.430817" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<msg time="2026-04-27T10:48:14.552353" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:34.428505" elapsed="0.249670"/>
+<status status="PASS" start="2026-04-27T10:48:14.552353" elapsed="0.081943"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:34.426922" elapsed="0.252264"/>
+<status status="PASS" start="2026-04-27T10:48:14.552353" elapsed="0.082942"/>
 </kw>
 <kw name="Verify Error Message" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ERROR_MESSAGE}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:34.681199" elapsed="0.726325"/>
+<status status="PASS" start="2026-04-27T10:48:14.635295" elapsed="0.739541"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:35.462042" level="INFO">Element 'xpath=//div[contains(@class,'flash error')]' contains text 'Your username is invalid!'.</msg>
+<msg time="2026-04-27T10:48:15.398465" level="INFO">Element 'xpath=//div[contains(@class,'flash error')]' contains text 'Your username is invalid!'.</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <arg>Your username is invalid!</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-04-16T14:37:35.407524" elapsed="0.054518"/>
+<status status="PASS" start="2026-04-27T10:48:15.374836" elapsed="0.023629"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:34.679186" elapsed="0.784130"/>
+<status status="PASS" start="2026-04-27T10:48:14.635295" elapsed="0.763170"/>
 </kw>
 <kw name="Close Browser Session" owner="login_keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-04-16T14:37:35.465727" elapsed="2.229788"/>
+<status status="PASS" start="2026-04-27T10:48:15.399496" elapsed="2.134400"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:35.464711" elapsed="2.231908"/>
+<status status="PASS" start="2026-04-27T10:48:15.399496" elapsed="2.135403"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:27.456614" elapsed="10.240005"/>
+<status status="PASS" start="2026-04-27T10:48:10.222648" elapsed="7.312251"/>
 </test>
-<status status="PASS" start="2026-04-16T14:37:18.252760" elapsed="19.444871"/>
-</suite>
-<suite id="s1-s7" name="Pagination Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\pagination_test.robot">
-<test id="s1-s7-t1" name="Pagination Navigation Test" line="5">
-<kw name="Open Pagination Page" owner="pagination_keywords">
+<test id="s1-t3" name="Invalid Password Valid Username Test" line="23">
+<kw name="Open Login Page" owner="login_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:37.714980" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
+<msg time="2026-04-27T10:48:17.538852" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:37.714980" elapsed="5.423634"/>
+<status status="PASS" start="2026-04-27T10:48:17.537840" elapsed="4.094116"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.139639" elapsed="0.044832"/>
+<status status="PASS" start="2026-04-27T10:48:21.631956" elapsed="0.030920"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:37.713985" elapsed="5.470486"/>
+<status status="PASS" start="2026-04-27T10:48:17.537840" elapsed="4.125036"/>
 </kw>
-<kw name="Verify Table Visible" owner="pagination_keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:43.233569" level="INFO">Element 'xpath=//table[@id='productTable']/tbody/tr' is displayed.</msg>
-<arg>${TABLE_ROWS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.186698" elapsed="0.046871"/>
+<kw name="Enter Username" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:21.663880" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:21.663880" elapsed="0.140571"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.185703" elapsed="0.047866"/>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2026-04-27T10:48:21.663880" elapsed="0.140571"/>
 </kw>
-<kw name="Click Page 2" owner="pagination_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:43.236570" level="INFO">Clicking element 'xpath=//ul[@class='pagination']//a[text()='2']'.</msg>
-<arg>${NEXT_PAGE_2}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.236570" elapsed="0.164540"/>
+<kw name="Enter Password" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:21.805652" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:21.805652" elapsed="0.075741"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.235561" elapsed="0.166550"/>
+<arg>invalidpassword</arg>
+<status status="PASS" start="2026-04-27T10:48:21.804451" elapsed="0.076942"/>
 </kw>
-<kw name="Verify Table Visible" owner="pagination_keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:43.440676" level="INFO">Element 'xpath=//table[@id='productTable']/tbody/tr' is displayed.</msg>
-<arg>${TABLE_ROWS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.403103" elapsed="0.038579"/>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:21.882395" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:21.882395" elapsed="0.084270"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.402111" elapsed="0.039571"/>
+<status status="PASS" start="2026-04-27T10:48:21.882395" elapsed="0.084270"/>
 </kw>
-<kw name="Click Page 3" owner="pagination_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:43.443673" level="INFO">Clicking element 'xpath=//ul[@class='pagination']//a[text()='3']'.</msg>
-<arg>${NEXT_PAGE_3}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.443673" elapsed="0.132543"/>
+<kw name="Verify Invalid Password Error" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-27T10:48:21.967689" elapsed="0.738805"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.442673" elapsed="0.134565"/>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:22.732313" level="INFO">Element 'xpath=//div[contains(@class,'flash error')]' contains text 'Your password is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-27T10:48:22.706494" elapsed="0.026920"/>
 </kw>
-<kw name="Verify Table Visible" owner="pagination_keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:43.611639" level="INFO">Element 'xpath=//table[@id='productTable']/tbody/tr' is displayed.</msg>
-<arg>${TABLE_ROWS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.580380" elapsed="0.031259"/>
+<status status="PASS" start="2026-04-27T10:48:21.967689" elapsed="0.765725"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.579317" elapsed="0.032322"/>
-</kw>
-<kw name="Close Browser Session" owner="pagination_keywords">
+<kw name="Close Browser Session" owner="login_keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-04-16T14:37:43.613634" elapsed="2.253710"/>
+<status status="PASS" start="2026-04-27T10:48:22.733414" elapsed="2.163592"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:43.612632" elapsed="2.254712"/>
+<status status="PASS" start="2026-04-27T10:48:22.733414" elapsed="2.163592"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:37.712966" elapsed="8.155268"/>
+<status status="PASS" start="2026-04-27T10:48:17.535898" elapsed="7.362563"/>
 </test>
-<test id="s1-s7-t2" name="Select Checkbox From Table Test" line="14">
-<kw name="Open Pagination Page" owner="pagination_keywords">
+<test id="s1-t4" name="Valid Password Invalid Username Test" line="31">
+<kw name="Open Login Page" owner="login_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:45.870816" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
+<msg time="2026-04-27T10:48:24.900804" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:45.869759" elapsed="5.330967"/>
+<status status="PASS" start="2026-04-27T10:48:24.900804" elapsed="4.088945"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-16T14:37:51.200726" elapsed="0.042695"/>
+<status status="PASS" start="2026-04-27T10:48:28.989749" elapsed="0.027381"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:45.869759" elapsed="5.373662"/>
+<status status="PASS" start="2026-04-27T10:48:24.900804" elapsed="4.116326"/>
 </kw>
-<kw name="Select First Checkbox" owner="pagination_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:51.246420" level="INFO">Clicking element 'xpath=(//input[@type='checkbox'])[1]'.</msg>
-<arg>${CHECKBOX_FIRST}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:51.245427" elapsed="0.160684"/>
+<kw name="Enter Username" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:29.018298" level="INFO">Typing text 'invaliduser' into text field 'id=username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:29.018298" elapsed="0.114965"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:51.244444" elapsed="0.161667"/>
+<arg>invaliduser</arg>
+<status status="PASS" start="2026-04-27T10:48:29.018298" elapsed="0.114965"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:37:51.407107" elapsed="2.212585"/>
+<kw name="Enter Password" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:29.134388" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:29.133859" elapsed="0.101373"/>
 </kw>
-<status status="PASS" start="2026-04-16T14:37:45.868756" elapsed="7.751919"/>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2026-04-27T10:48:29.133859" elapsed="0.101373"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:29.236230" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:48:29.236230" elapsed="0.079697"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:48:29.236230" elapsed="0.079697"/>
+</kw>
+<kw name="Verify Error Message" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-27T10:48:29.316962" elapsed="0.742691"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:48:30.098874" level="INFO">Element 'xpath=//div[contains(@class,'flash error')]' contains text 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-04-27T10:48:30.059653" elapsed="0.039221"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:48:29.316962" elapsed="0.781912"/>
+</kw>
+<kw name="Close Browser Session" owner="login_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-04-27T10:48:30.099910" elapsed="2.159803"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:48:30.098874" elapsed="2.160839"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:48:24.899489" elapsed="7.361236"/>
 </test>
-<status status="PASS" start="2026-04-16T14:37:37.699955" elapsed="15.920720"/>
-</suite>
-<suite id="s1-s8" name="Radio Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\radio_test.robot">
-<test id="s1-s8-t1" name="Verify Radio Button Selection" line="5">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:53.628583" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-16T14:37:53.627580" elapsed="4.510962"/>
-</kw>
-<kw name="Select Male Radio" owner="radio_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:58.141615" level="INFO">Clicking element 'id=male'.</msg>
-<arg>${MALE_RADIO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-16T14:37:58.140608" elapsed="0.266961"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:58.139559" elapsed="0.269089"/>
-</kw>
-<kw name="Verify Male Selected" owner="radio_keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-04-16T14:37:58.454689" level="INFO">Element 'id=male' is displayed.</msg>
-<arg>${MALE_RADIO}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-16T14:37:58.411219" elapsed="0.043470"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:58.409218" elapsed="0.045471"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-16T14:37:58.455703" elapsed="2.201143"/>
-</kw>
-<status status="PASS" start="2026-04-16T14:37:53.627580" elapsed="7.029266"/>
-</test>
-<status status="PASS" start="2026-04-16T14:37:53.622556" elapsed="7.035918"/>
-</suite>
-<status status="PASS" start="2026-04-16T14:36:14.595638" elapsed="106.064864"/>
+<status status="PASS" start="2026-04-27T10:48:02.776896" elapsed="29.484828"/>
 </suite>
 <statistics>
 <total>
-<stat pass="11" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="11" fail="0" skip="0">Tests</stat>
-<stat name="Alert Test" id="s1-s1" pass="1" fail="0" skip="0">Tests.Alert Test</stat>
-<stat name="Dragdrop Test" id="s1-s2" pass="1" fail="0" skip="0">Tests.Dragdrop Test</stat>
-<stat name="Dropdown Test" id="s1-s3" pass="1" fail="0" skip="0">Tests.Dropdown Test</stat>
-<stat name="Form Test" id="s1-s4" pass="1" fail="0" skip="0">Tests.Form Test</stat>
-<stat name="Hover Test" id="s1-s5" pass="2" fail="0" skip="0">Tests.Hover Test</stat>
-<stat name="Login Test" id="s1-s6" pass="2" fail="0" skip="0">Tests.Login Test</stat>
-<stat name="Pagination Test" id="s1-s7" pass="2" fail="0" skip="0">Tests.Pagination Test</stat>
-<stat name="Radio Test" id="s1-s8" pass="1" fail="0" skip="0">Tests.Radio Test</stat>
+<stat name="Login Test" id="s1" pass="4" fail="0" skip="0">Login Test</stat>
 </suite>
 </statistics>
 <errors>

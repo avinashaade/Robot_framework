@@ -26,6 +26,10 @@ Verify Error Message
     Wait Until Element Is Visible    ${ERROR_MESSAGE}    10s
     Element Should Contain     ${ERROR_MESSAGE}   Your username is invalid!
 
+Verify Invalid Password Error
+    Wait Until Element Is Visible    ${ERROR_MESSAGE}    10s
+    Element Should Contain     ${ERROR_MESSAGE}   Your password is invalid!
+
     
 
 Close Browser Session

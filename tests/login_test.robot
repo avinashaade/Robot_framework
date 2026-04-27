@@ -19,3 +19,19 @@ Invalid Login Test
     Click Login Button
     Verify Error Message
     Close Browser Session
+
+Invalid Password Valid Username Test
+    Open Login Page
+    Enter Username    ${USERNAME}
+    Enter Password    invalidpassword
+    Click Login Button
+    Verify Invalid Password Error
+    Close Browser Session
+
+Valid Password Invalid Username Test
+    Open Login Page
+    Enter Username    invaliduser
+    Enter Password    ${PASSWORD}
+    Click Login Button
+    Verify Error Message
+    Close Browser Session
