@@ -1,49 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-27T15:56:15.231707" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-27T17:33:35.674008" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Framework Project" source="C:\Users\Avinash Aade\Desktop\robot_framework_project">
 <suite id="s1-s1" name="Tests" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests">
-<suite id="s1-s1-s1" name="Alert Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\alert_test.robot">
-<test id="s1-s1-s1-t1" name="Verify Alert Handling" line="5">
-<kw name="Open Alert Page" owner="alert_keywords">
+<suite id="s1-s1-s1" name="doubleClick test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\doubleClick_test.robot">
+<test id="s1-s1-s1-t1" name="Verify Double Click Action" line="5">
+<kw name="Open Double Click Page" owner="doubleClick_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-27T15:56:15.433947" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-04-27T17:33:35.883438" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
 <arg>https://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-27T15:56:15.433947" elapsed="4.570630"/>
+<status status="PASS" start="2026-04-27T17:33:35.883438" elapsed="5.305564"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-27T15:56:20.004577" elapsed="0.033819"/>
+<status status="PASS" start="2026-04-27T17:33:41.189002" elapsed="0.030225"/>
 </kw>
-<status status="PASS" start="2026-04-27T15:56:15.432928" elapsed="4.605468"/>
+<status status="PASS" start="2026-04-27T17:33:35.882436" elapsed="5.337791"/>
 </kw>
-<kw name="Handle Alert Popup" owner="alert_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T15:56:20.040405" level="INFO">Clicking element 'xpath=//button[contains(text(),'Alert')]'.</msg>
-<arg>${ALERT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T15:56:20.039397" elapsed="0.112640"/>
+<kw name="Perform Double Click Action" owner="doubleClick_keywords">
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T17:33:41.222336" level="INFO">Double clicking element 'xpath=//button[@ondblclick = 'myFunction1()']'.</msg>
+<arg>${DOUBLE_CLICK_BUTTON}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T17:33:41.221339" elapsed="0.324141"/>
 </kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2026-04-27T15:56:20.153058" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>accept</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2026-04-27T15:56:20.153058" elapsed="0.011749"/>
+<status status="PASS" start="2026-04-27T17:33:41.220227" elapsed="0.325253"/>
 </kw>
-<status status="PASS" start="2026-04-27T15:56:20.039397" elapsed="0.125410"/>
+<kw name="Close Browser" owner="doubleClick_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-04-27T17:33:41.546480" elapsed="2.368813"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-27T15:56:20.165866" elapsed="2.239316"/>
+<status status="PASS" start="2026-04-27T17:33:41.545480" elapsed="2.370827"/>
 </kw>
-<status status="PASS" start="2026-04-27T15:56:15.426316" elapsed="6.979845"/>
+<status status="PASS" start="2026-04-27T17:33:35.876448" elapsed="8.040857"/>
 </test>
-<status status="PASS" start="2026-04-27T15:56:15.277733" elapsed="7.137993"/>
+<status status="PASS" start="2026-04-27T17:33:35.731361" elapsed="8.195466"/>
 </suite>
-<status status="PASS" start="2026-04-27T15:56:15.271114" elapsed="7.151118"/>
+<status status="PASS" start="2026-04-27T17:33:35.726380" elapsed="8.204837"/>
 </suite>
-<status status="PASS" start="2026-04-27T15:56:15.236714" elapsed="7.191275"/>
+<status status="PASS" start="2026-04-27T17:33:35.686308" elapsed="8.252922"/>
 </suite>
 <statistics>
 <total>
@@ -54,7 +51,7 @@
 <suite>
 <stat name="Robot Framework Project" id="s1" pass="1" fail="0" skip="0">Robot Framework Project</stat>
 <stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Robot Framework Project.Tests</stat>
-<stat name="Alert Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework Project.Tests.Alert Test</stat>
+<stat name="doubleClick test" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework Project.Tests.doubleClick test</stat>
 </suite>
 </statistics>
 <errors>
