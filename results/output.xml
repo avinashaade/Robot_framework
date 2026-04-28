@@ -1,57 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-27T17:33:35.674008" rpa="false" schemaversion="5">
-<suite id="s1" name="Robot Framework Project" source="C:\Users\Avinash Aade\Desktop\robot_framework_project">
-<suite id="s1-s1" name="Tests" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests">
-<suite id="s1-s1-s1" name="doubleClick test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\doubleClick_test.robot">
-<test id="s1-s1-s1-t1" name="Verify Double Click Action" line="5">
-<kw name="Open Double Click Page" owner="doubleClick_keywords">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-28T11:31:10.822218" rpa="false" schemaversion="5">
+<suite id="s1" name="Download Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\download_test.robot">
+<test id="s1-t1" name="Verify Download Text File From Webpage" line="5">
+<kw name="Open Download Page" owner="download_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-27T17:33:35.883438" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-27T17:33:35.883438" elapsed="5.305564"/>
+<status status="FAIL" start="2026-04-28T11:32:30.232403" elapsed="0.000000">Execution terminated by signal</status>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-27T17:33:41.189002" elapsed="0.030225"/>
+<status status="NOT RUN" start="2026-04-28T11:32:30.233510" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-04-27T17:33:35.882436" elapsed="5.337791"/>
+<status status="FAIL" start="2026-04-28T11:31:12.953132" elapsed="77.280378">Execution terminated by signal</status>
 </kw>
-<kw name="Perform Double Click Action" owner="doubleClick_keywords">
-<kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-27T17:33:41.222336" level="INFO">Double clicking element 'xpath=//button[@ondblclick = 'myFunction1()']'.</msg>
-<arg>${DOUBLE_CLICK_BUTTON}</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-27T17:33:41.221339" elapsed="0.324141"/>
+<kw name="Scroll To Footer" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.234403" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-04-27T17:33:41.220227" elapsed="0.325253"/>
+<kw name="Enter Message" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.234403" elapsed="0.000998"/>
 </kw>
-<kw name="Close Browser" owner="doubleClick_keywords">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-04-27T17:33:41.546480" elapsed="2.368813"/>
+<kw name="Click Generate File" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.235401" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-04-27T17:33:41.545480" elapsed="2.370827"/>
+<kw name="Click Download File" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.235401" elapsed="0.001316"/>
 </kw>
-<status status="PASS" start="2026-04-27T17:33:35.876448" elapsed="8.040857"/>
+<kw name="Verify File Downloaded" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.236717" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser Session" owner="download_keywords">
+<status status="NOT RUN" start="2026-04-28T11:32:30.237764" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-04-28T11:31:12.946423" elapsed="77.291341">Execution terminated by signal</status>
 </test>
-<status status="PASS" start="2026-04-27T17:33:35.731361" elapsed="8.195466"/>
-</suite>
-<status status="PASS" start="2026-04-27T17:33:35.726380" elapsed="8.204837"/>
-</suite>
-<status status="PASS" start="2026-04-27T17:33:35.686308" elapsed="8.252922"/>
+<status status="FAIL" start="2026-04-28T11:31:10.831599" elapsed="79.411808"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Robot Framework Project" id="s1" pass="1" fail="0" skip="0">Robot Framework Project</stat>
-<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Robot Framework Project.Tests</stat>
-<stat name="doubleClick test" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework Project.Tests.doubleClick test</stat>
+<stat name="Download Test" id="s1" pass="0" fail="1" skip="0">Download Test</stat>
 </suite>
 </statistics>
 <errors>
