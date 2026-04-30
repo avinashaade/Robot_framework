@@ -1,41 +1,384 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-28T11:31:10.822218" rpa="false" schemaversion="5">
-<suite id="s1" name="Download Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\download_test.robot">
-<test id="s1-t1" name="Verify Download Text File From Webpage" line="5">
-<kw name="Open Download Page" owner="download_keywords">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-04-28T15:39:13.323656" rpa="false" schemaversion="5">
+<suite id="s1" name="Lenovo Test" source="C:\Users\Avinash Aade\Desktop\robot_framework_project\tests\lenovo_test.robot">
+<test id="s1-t1" name="Verify Lenovo Advanced Purchase Flow" line="5">
+<kw name="Open AJAX Page" owner="lenovo_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:13.501727" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/p/gui-elements-ajax-hidden.html'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2026-04-28T11:32:30.232403" elapsed="0.000000">Execution terminated by signal</status>
+<status status="PASS" start="2026-04-28T15:39:13.501727" elapsed="5.986961"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2026-04-28T11:32:30.233510" elapsed="0.000000"/>
+<status status="PASS" start="2026-04-28T15:39:19.488688" elapsed="0.029127"/>
 </kw>
-<status status="FAIL" start="2026-04-28T11:31:12.953132" elapsed="77.280378">Execution terminated by signal</status>
+<status status="PASS" start="2026-04-28T15:39:13.500724" elapsed="6.018102"/>
 </kw>
-<kw name="Scroll To Footer" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.234403" elapsed="0.000000"/>
+<kw name="Click Lenovo Link" owner="lenovo_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:19.520823" level="INFO">Executing JavaScript:
+window.scrollBy(0,1500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,1500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-04-28T15:39:19.519827" elapsed="0.012103"/>
 </kw>
-<kw name="Enter Message" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.234403" elapsed="0.000998"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LENOVO_LINK}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:19.532928" elapsed="0.036414"/>
 </kw>
-<kw name="Click Generate File" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.235401" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:19.570341" level="INFO">Clicking element 'xpath=//a[contains(text(),'Lenovo')]'.</msg>
+<arg>${LENOVO_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:19.569342" elapsed="2.416110"/>
 </kw>
-<kw name="Click Download File" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.235401" elapsed="0.001316"/>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>lenovo</arg>
+<arg>15s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-04-28T15:39:21.985452" elapsed="0.008266"/>
 </kw>
-<kw name="Verify File Downloaded" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.236717" elapsed="0.000000"/>
+<status status="PASS" start="2026-04-28T15:39:19.518826" elapsed="2.474892"/>
 </kw>
-<kw name="Close Browser Session" owner="download_keywords">
-<status status="NOT RUN" start="2026-04-28T11:32:30.237764" elapsed="0.000000"/>
+<kw name="Open Laptop Category" owner="lenovo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LAPTOP_MENU}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:21.994719" elapsed="0.032827"/>
 </kw>
-<status status="FAIL" start="2026-04-28T11:31:12.946423" elapsed="77.291341">Execution terminated by signal</status>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:22.028549" level="INFO">Clicking element 'xpath=//a[contains(text(),'Laptops')]'.</msg>
+<arg>${LAPTOP_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:22.028549" elapsed="1.480760"/>
+</kw>
+<status status="PASS" start="2026-04-28T15:39:21.994719" elapsed="1.516048"/>
+</kw>
+<kw name="Apply Filters" owner="lenovo_keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${AURA_FILTER}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-04-28T15:39:23.511776" elapsed="0.392646"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AURA_FILTER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:23.904422" elapsed="0.031730"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:23.938683" level="INFO">Clicking element 'xpath=//label[contains(.,'Aura Edition')]'.</msg>
+<msg time="2026-04-28T15:39:25.269608" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:25.270597" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="checkbox_for_label" for="facet_checkbox_100006"&gt;...&lt;/label&gt; is not clickable at point (50, 667). Other element would receive the click: &lt;span class="lenovo...Text"&gt;Feedback&lt;/span&gt;
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff75189a8e5+14e45]
+	chromedriver!GetHandleVerifier [0x7ff75189a950+14eb0]
+	chromedriver!(No symbol) [0x7ff75160d6ed]
+	chromedriver!(No symbol) [0x7ff75166f245]
+	chromedriver!(No symbol) [0x7ff75166c95a]
+	chromedriver!(No symbol) [0x7ff7516697e5]
+	chromedriver!(No symbol) [0x7ff751668697]
+	chromedriver!(No symbol) [0x7ff75165b1c6]
+	chromedriver!(No symbol) [0x7ff75169002a]
+	chromedriver!(No symbol) [0x7ff75165aa46]
+	chromedriver!(No symbol) [0x7ff7516b483b]
+	chromedriver!(No symbol) [0x7ff7516590e8]
+	chromedriver!(No symbol) [0x7ff751659fc3]
+	chromedriver!GetHandleVerifier [0x7ff751bb0149+32a6a9]
+	chromedriver!GetHandleVerifier [0x7ff751baa715+324c75]
+	chromedriver!GetHandleVerifier [0x7ff751bcc012+346572]
+	chromedriver!GetHandleVerifier [0x7ff7518b7cb5+32215]
+	chromedriver!GetHandleVerifier [0x7ff7518c087c+3addc]
+	chromedriver!GetHandleVerifier [0x7ff7518a40e4+1e644]
+	chromedriver!GetHandleVerifier [0x7ff7518a4296+1e7f6]
+	chromedriver!GetHandleVerifier [0x7ff751888737+2c97]
+	KERNEL32!BaseThreadInitThunk [0x7ffedd2de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffedea8c3fc+2c]
+</msg>
+<arg>${AURA_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:23.937259" elapsed="1.344858">ElementClickInterceptedException: Message: element click intercepted: Element &lt;label class="checkbox_for_label" for="facet_checkbox_100006"&gt;...&lt;/label&gt; is not clickable at point (50, 667). Other element would receive the click: &lt;span class="lenovo...Text"&gt;Feedback&lt;/span&gt;
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff75189a8e5+14e45]
+	chromedriver!GetHandleVerifier [0x7ff75189a950+14eb0]
+	chromedriver!(No symbol) [0x7ff75160d6ed]
+	chromedriver!(No symbol) [0x7ff75166f245]
+	chromedriver!(No symbol) [0x7ff75166c95a]
+	chromedriver!(No symbol) [0x7ff7516697e5]
+	chromedriver!(No symbol) [0x7ff751668697]
+	chromedriver!(No symbol) [0x7ff75165b1c6]
+	chromedriver!(No symbol) [0x7ff75169002a]
+	chromedriver!(No symbol) [0x7ff75165aa46]
+	chromedriver!(No symbol) [0x7ff7516b483b]
+	chromedriver!(No symbol) [0x7ff7516590e8]
+	chromedriver!(No symbol) [0x7ff751659fc3]
+	chromedriver!GetHandleVerifier [0x7ff751bb0149+32a6a9]
+	chromedriver!GetHandleVerifier [0x7ff751baa715+324c75]
+	chromedriver!GetHandleVerifier [0x7ff751bcc012+346572]
+	chromedriver!GetHandleVerifier [0x7ff7518b7cb5+32215]
+	chromedriver!GetHandleVerifier [0x7ff7518c087c+3addc]
+	chromedriver!GetHandleVerifier [0x7ff7518a40e4+1e644]
+	chromedriver!GetHandleVerifier [0x7ff7518a4296+1e7f6]
+	chromedriver!GetHandleVerifier [0x7ff751888737+2c97]
+	KERNEL32!BaseThreadInitThunk [0x7ffedd2de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffedea8c3fc+2c]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:27.284396" level="INFO">Clicking element 'xpath=//label[contains(.,'Aura Edition')]'.</msg>
+<arg>${AURA_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:27.283284" elapsed="2.066904"/>
+</kw>
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${AURA_FILTER}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-04-28T15:39:23.937259" elapsed="5.412929"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:29.356570" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:29.664010" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:29.665014" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:29.355578" elapsed="0.319636">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:31.677812" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:31.910376" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:31.910376" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:31.677304" elapsed="0.247142">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:33.925642" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:34.094898" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:34.095899" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:33.925642" elapsed="0.178268">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:36.105664" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:36.251460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:36.251460" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:36.104549" elapsed="0.153159">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:38.259089" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:38.398479" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:38.399401" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:38.258068" elapsed="0.147684">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:40.407503" level="INFO">Clicking element 'xpath=//label[contains(.,'Best Seller')]'.</msg>
+<msg time="2026-04-28T15:39:40.553546" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:40.554544" level="FAIL">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:40.406499" elapsed="0.156054">Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<msg time="2026-04-28T15:39:40.562553" level="FAIL">Keyword 'Click Element' failed after retrying for 10 seconds. The last error was: Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</msg>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2026-04-28T15:39:29.354572" elapsed="11.215990">Keyword 'Click Element' failed after retrying for 10 seconds. The last error was: Element with locator 'xpath=//label[contains(.,'Best Seller')]' not found.</status>
+</kw>
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${BESTSELLER_FILTER}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-04-28T15:39:29.351563" elapsed="11.219997"/>
+</kw>
+<status status="PASS" start="2026-04-28T15:39:23.510767" elapsed="17.060793"/>
+</kw>
+<kw name="Select Target Product" owner="lenovo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TARGET_PRODUCT}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:40.573563" elapsed="0.035457"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${TARGET_PRODUCT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-04-28T15:39:40.609020" elapsed="0.292065"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:40.904183" level="INFO">Clicking element 'xpath=(//a[contains(text(),'AURA EDITION Yoga Pro 7')])[2]'.</msg>
+<arg>${TARGET_PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:40.903170" elapsed="3.832088"/>
+</kw>
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${TARGET_PRODUCT}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-04-28T15:39:40.902087" elapsed="3.834193"/>
+</kw>
+<status status="PASS" start="2026-04-28T15:39:40.572556" elapsed="4.164722"/>
+</kw>
+<kw name="Add Product To Cart" owner="lenovo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BTN}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:44.740805" elapsed="1.170740"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-04-28T15:39:45.912536" elapsed="1.201218"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:47.117747" level="INFO">Clicking element 'xpath=(//span[normalize-space()='Add To Cart'])[1]'.</msg>
+<msg time="2026-04-28T15:39:48.476865" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:39:48.478319" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="text" data-tkey="addToCart" id="MTM-btn-label-3"&gt;...&lt;/span&gt; is not clickable at point (959, 666). Other element would receive the click: &lt;div class="checkapp content flexBetween"&gt;...&lt;/div&gt;
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff75189a8e5+14e45]
+	chromedriver!GetHandleVerifier [0x7ff75189a950+14eb0]
+	chromedriver!(No symbol) [0x7ff75160d6ed]
+	chromedriver!(No symbol) [0x7ff75166f245]
+	chromedriver!(No symbol) [0x7ff75166c95a]
+	chromedriver!(No symbol) [0x7ff7516697e5]
+	chromedriver!(No symbol) [0x7ff751668697]
+	chromedriver!(No symbol) [0x7ff75165b1c6]
+	chromedriver!(No symbol) [0x7ff75169002a]
+	chromedriver!(No symbol) [0x7ff75165aa46]
+	chromedriver!(No symbol) [0x7ff7516b483b]
+	chromedriver!(No symbol) [0x7ff7516590e8]
+	chromedriver!(No symbol) [0x7ff751659fc3]
+	chromedriver!GetHandleVerifier [0x7ff751bb0149+32a6a9]
+	chromedriver!GetHandleVerifier [0x7ff751baa715+324c75]
+	chromedriver!GetHandleVerifier [0x7ff751bcc012+346572]
+	chromedriver!GetHandleVerifier [0x7ff7518b7cb5+32215]
+	chromedriver!GetHandleVerifier [0x7ff7518c087c+3addc]
+	chromedriver!GetHandleVerifier [0x7ff7518a40e4+1e644]
+	chromedriver!GetHandleVerifier [0x7ff7518a4296+1e7f6]
+	chromedriver!GetHandleVerifier [0x7ff751888737+2c97]
+	KERNEL32!BaseThreadInitThunk [0x7ffedd2de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffedea8c3fc+2c]
+</msg>
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-28T15:39:47.116744" elapsed="1.368589">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="text" data-tkey="addToCart" id="MTM-btn-label-3"&gt;...&lt;/span&gt; is not clickable at point (959, 666). Other element would receive the click: &lt;div class="checkapp content flexBetween"&gt;...&lt;/div&gt;
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff75189a8e5+14e45]
+	chromedriver!GetHandleVerifier [0x7ff75189a950+14eb0]
+	chromedriver!(No symbol) [0x7ff75160d6ed]
+	chromedriver!(No symbol) [0x7ff75166f245]
+	chromedriver!(No symbol) [0x7ff75166c95a]
+	chromedriver!(No symbol) [0x7ff7516697e5]
+	chromedriver!(No symbol) [0x7ff751668697]
+	chromedriver!(No symbol) [0x7ff75165b1c6]
+	chromedriver!(No symbol) [0x7ff75169002a]
+	chromedriver!(No symbol) [0x7ff75165aa46]
+	chromedriver!(No symbol) [0x7ff7516b483b]
+	chromedriver!(No symbol) [0x7ff7516590e8]
+	chromedriver!(No symbol) [0x7ff751659fc3]
+	chromedriver!GetHandleVerifier [0x7ff751bb0149+32a6a9]
+	chromedriver!GetHandleVerifier [0x7ff751baa715+324c75]
+	chromedriver!GetHandleVerifier [0x7ff751bcc012+346572]
+	chromedriver!GetHandleVerifier [0x7ff7518b7cb5+32215]
+	chromedriver!GetHandleVerifier [0x7ff7518c087c+3addc]
+	chromedriver!GetHandleVerifier [0x7ff7518a40e4+1e644]
+	chromedriver!GetHandleVerifier [0x7ff7518a4296+1e7f6]
+	chromedriver!GetHandleVerifier [0x7ff751888737+2c97]
+	KERNEL32!BaseThreadInitThunk [0x7ffedd2de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffedea8c3fc+2c]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:50.488194" level="INFO">Clicking element 'xpath=(//span[normalize-space()='Add To Cart'])[1]'.</msg>
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:50.487014" elapsed="0.120464"/>
+</kw>
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${ADD_TO_CART_BTN}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-04-28T15:39:47.114749" elapsed="3.492729"/>
+</kw>
+<status status="PASS" start="2026-04-28T15:39:44.738804" elapsed="5.868674"/>
+</kw>
+<kw name="Go To Cart" owner="lenovo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CART_ICON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-28T15:39:50.608475" elapsed="0.021590"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:39:50.631080" level="INFO">Clicking element 'xpath=//a[contains(@href,'/cart')]'.</msg>
+<arg>${CART_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-28T15:39:50.630065" elapsed="2.892657"/>
+</kw>
+<status status="PASS" start="2026-04-28T15:39:50.607478" elapsed="2.915244"/>
+</kw>
+<kw name="Enter Delivery Pincode" owner="lenovo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-04-28T15:40:03.739766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-28T15:40:03.739766" level="FAIL">Element 'xpath=//input[contains(@placeholder,'pincode')]' not visible after 10 seconds.</msg>
+<arg>${PINCODE_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-04-28T15:39:53.523724" elapsed="10.226046">Element 'xpath=//input[contains(@placeholder,'pincode')]' not visible after 10 seconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${PINCODE_INPUT}</arg>
+<arg>411001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-28T15:40:03.750771" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CHECK_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-28T15:40:03.750771" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-04-28T15:39:53.523724" elapsed="10.227047">Element 'xpath=//input[contains(@placeholder,'pincode')]' not visible after 10 seconds.</status>
+</kw>
+<kw name="Proceed To Checkout" owner="lenovo_keywords">
+<status status="NOT RUN" start="2026-04-28T15:40:03.751771" elapsed="0.000000"/>
+</kw>
+<kw name="Click Guest Checkout" owner="lenovo_keywords">
+<status status="NOT RUN" start="2026-04-28T15:40:03.752767" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="lenovo_keywords">
+<status status="NOT RUN" start="2026-04-28T15:40:03.752767" elapsed="0.001044"/>
+</kw>
+<status status="FAIL" start="2026-04-28T15:39:13.496655" elapsed="50.257156">Element 'xpath=//input[contains(@placeholder,'pincode')]' not visible after 10 seconds.</status>
 </test>
-<status status="FAIL" start="2026-04-28T11:31:10.831599" elapsed="79.411808"/>
+<status status="FAIL" start="2026-04-28T15:39:13.329188" elapsed="50.435583"/>
 </suite>
 <statistics>
 <total>
@@ -44,7 +387,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Download Test" id="s1" pass="0" fail="1" skip="0">Download Test</stat>
+<stat name="Lenovo Test" id="s1" pass="0" fail="1" skip="0">Lenovo Test</stat>
 </suite>
 </statistics>
 <errors>
