@@ -21,4 +21,3 @@ Select Form Options
 
 Close Browser Session
     Close All Browsers
-    
